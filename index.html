@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Catalog</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="navbar" id="navbar">
+      <button id="viewProposal" onclick="viewHistory()">View History</button>
+      <button id="clearProposalButton">Clear Proposal</button>
+    </div>
+
+    <div id="product-container"></div>
+    <span id="toggleSidebar" onclick="toggleSidebar()">☰</span>
+    <div id="sidebar" class="sidebar">
+      <div id="totals">
+        <p id="totalRecurring">Total Recurring: $0</p>
+        <p id="totalOneTime">Total One-Time: $0</p>
+      </div>
+      <div id="productList">
+        <!-- Added products will be listed here -->
+      </div>
+    </div>
+
+    <button id="generateProposal" onclick="generateProposal()">
+      Save Proposal
+    </button>
+
+    <!-- Modal structure -->
+    <div id="proposalModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <table>
+          <thead>
+            <tr>
+              <th>Catalog</th>
+              <th>Product</th>
+              <th>Recurring</th>
+              <th>One-Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Table rows will be added here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div id="historyModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeHistoryModal()">&times;</span>
+        <div id="historyContent"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

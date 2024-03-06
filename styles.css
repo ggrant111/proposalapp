@@ -1,0 +1,193 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.section-header {
+  background: #fff;
+  padding: 10px;
+
+  position: sticky;
+  top: 0;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.section-content {
+  display: flex;
+  padding: 10px;
+  scroll-snap-type: x mandatory;
+  overflow-x: auto; /* Horizontal scrolling */
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.section-content::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+.card {
+  min-width: 150px !important;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 15px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card h3 {
+  font-size: 11px;
+  margin: 0;
+  color: #333;
+}
+
+.card p {
+  font-size: 10px;
+}
+
+.card button {
+  height: 30px;
+  width: 30px;
+  border-radius: 60px;
+  background-color: cornflowerblue;
+  color: #fff;
+  border: none;
+  font-size: x-large;
+  align-self: center; /* Centers the button horizontally */
+  margin-top: auto;
+}
+
+.card h2 {
+  font-size: xx-large;
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+  top: -20px;
+  right: -11px;
+  position: relative;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.sidebar {
+  position: fixed; /* Keeps the sidebar in place while scrolling */
+  right: 0; /* Aligns to the right side of the viewport */
+  top: 0; /* Starts from the top */
+  width: 300px; /* Width of the sidebar */
+  height: 100%; /* Full height of the viewport */
+  background-color: #f9f9f9; /* Light grey background */
+  border-left: 1px solid #ccc; /* Border to separate from the main content */
+  overflow-y: auto; /* Allows vertical scrolling */
+  padding: 10px; /* Padding inside the sidebar */
+  padding-bottom: 60px; /* Extra padding at the bottom for the 'Generate Proposal' button */
+}
+
+#generateProposal {
+  position: fixed; /* Fixed positioning relative to the viewport */
+  right: 10px; /* 10px from the right edge of the viewport */
+  bottom: 10px; /* 10px from the bottom of the viewport */
+
+  background-color: cornflowerblue; /* Blue background */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#generateProposal:hover {
+  background-color: royalblue; /* Darker blue on hover */
+}
+
+.navbar {
+  background-color: #f9f9f9; /* Light grey background */
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.navbar button {
+  background-color: cornflowerblue; /* Blue background for buttons */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 5px;
+}
+
+.navbar button:hover {
+  background-color: royalblue; /* Slightly darker blue on hover */
+}
+#product-container {
+  margin-right: 300px; /* Adjust this value to match the width of your sidebar */
+}
+
+td {
+  text-align: center;
+}
+
+#productList {
+  max-height: 80vh;
+  overflow-y: auto;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none;
+}
+
+#productList::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+#toggleSidebar {
+  cursor: pointer;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  z-index: 2;
+}
